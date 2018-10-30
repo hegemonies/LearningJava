@@ -15,5 +15,22 @@ public class Main {
         }
 
         pb.printList();
+
+        System.out.println(pb.getUserBySNP("Ivanov Ivan").getPhone());
+        try {
+            pb.DeleteUser("Ivanov Ivan");
+//            pb.DeleteUser(8554354);
+        } catch (Exception exc) {
+            System.out.println("Error: " + exc.getMessage());
+        }
+
+        try {
+            System.out.println(pb.getUserBySNP("Ivanov Ivan").getPhone());
+        } catch (Exception exc) {
+            System.out.println("Error: " + exc.getMessage());
+        }
+
+
+        pb.printList();
     }
 }
