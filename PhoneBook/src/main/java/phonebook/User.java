@@ -1,9 +1,9 @@
 package phonebook;
 
-public class User {
-    String SNP;
-    String phone;
-    int TIN;
+public class User implements Comparable<User> {
+    private String SNP;
+    private String phone;
+    private int TIN;
 
     public User(String SNP, String phone, int TIN) {
         setSNP(SNP);
@@ -33,5 +33,9 @@ public class User {
 
     public void setSNP(String SNP) {
         this.SNP = SNP;
+    }
+
+    public int compareTo(User user) {
+        return SNP.compareTo(user.getSNP());
     }
 }

@@ -75,10 +75,10 @@ public class PhoneBook {
     }
 
     public void printList() {
-        System.out.println("SNP\t\t\t\tPhone\t\t\t\tTIN");
+        System.out.println("SNP \t\t\tPhone   \t\t\tTIN");
         for (User user : phBook) {
 //            System.out.println(user.getSNP() + "\t" + user.getPhone() + "\t" + user.getTIN());
-            System.out.printf("%s\t\t\t%s\t\t%d\n", user.getSNP(), user.getPhone(), user.getTIN());
+            System.out.printf("%s \t%s\t\t%d\n", user.getSNP(), user.getPhone(), user.getTIN());
         }
     }
 }
