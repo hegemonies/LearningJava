@@ -1,7 +1,7 @@
 package PhoneBook;
 import CSV.*;
 
-abstract class User implements CSV {
+abstract class User implements CSV, Comparable<User> {
     private String SNP; // ФИО
     private String phone;
 
@@ -30,17 +30,9 @@ abstract class User implements CSV {
         return getSNP() + " " + getPhone();
     }
 
-//    public String toCSV(Object obj) {
-//        if (obj.getClass().getName().equals("Entity")) {
-//            Entity entity = (Entity) obj;
-//            return entity.getSNP() +
-//                    entity.getPhone() +
-//                    entity.getTIN();
-//        } else if (obj.getClass().getName().equals("Individual")) {
-//            Individual individual = (Individual) obj;
-//            return individual.getSNP() +
-//                    individual.getPhone() +
-//                    individual.get();
-//        }
-//    }
+    public int compareTo(User user) {
+        return SNP.compareTo(user.getSNP());
+    }
+
+
 }

@@ -17,7 +17,7 @@ public class Individual extends User {
     }
 
     public String toString() {
-        return (super.getSNP() + "\t" + super.getPhone() + "\t" + getINIPA());
+        return (super.getSNP() + "\t" + super.getPhone() + "\t\t" + getINIPA());
     }
 
     public String toCSV() {

@@ -2,15 +2,21 @@ package PhoneBook;
 
 public class Entity extends User {
     private int TIN; // ИНН
+    private String address;
+    private int CRR; // КПП
+    private long capital; // уставной капитал
 
-    public Entity() {
+    public Entity(String SNP, String phone, int TIN, int CRR, long capital) {
         super("", "");
         setTIN(0);
     }
 
-    public Entity(String SNP, String phone, int TIN) {
+    public Entity(String SNP, String phone, int TIN, String address, int CRR, int capital) {
         super(SNP, phone);
         this.setTIN(TIN);
+        this.setAddress(address);
+        this.setCRR(CRR);
+        this.setCapital(capital);
     }
 
     public int getTIN() {
@@ -21,8 +27,37 @@ public class Entity extends User {
         this.TIN = TIN;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getCRR() {
+        return CRR;
+    }
+
+    public void setCRR(int CRR) {
+        this.CRR = CRR;
+    }
+
+    public long getCapital() {
+        return capital;
+    }
+
+    public void setCapital(int capital) {
+        this.capital = capital;
+    }
+
     public String toString() {
-        return (super.getSNP() + "\t" + super.getPhone() + "\t" + getTIN());
+        return (super.getSNP()
+                + "\t" + super.getPhone()
+                + "\t\t" + getTIN()
+                + "\t" + getAddress()
+                + "\t" + getCRR()
+                + "\t" + getCapital());
     }
 
     public String toCSV() {
