@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e92dfd47-67ca-46d3-a719-2158d07ff521" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CSVReader/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CSVReader/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/.idea/modules/Phonebook_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/.idea/modules/Phonebook_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/.idea/modules/Phonebook_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/.idea/modules/Phonebook_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/out/production/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/out/production/classes/PhoneBook/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/out/production/classes/PhoneBook/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/out/production/classes/PhoneBook/Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/out/production/classes/PhoneBook/Individual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/out/production/classes/PhoneBook/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/out/production/classes/PhoneBook/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/src/main/java/PhoneBook/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/src/main/java/PhoneBook/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/src/main/java/PhoneBook/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/src/main/java/PhoneBook/Individual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/src/main/java/PhoneBook/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PhoneBookPro/Phonebook/src/main/java/PhoneBook/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -23,6 +34,7 @@
     <session id="1271240294">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -55,16 +67,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            <state relative-caret-position="176">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CSVReader/CSVReader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
@@ -275,8 +287,10 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6164680441652" />
+        <entry key="$PROJECT_DIR$" value="6164699667765" />
+        <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="2945394030" />
+        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2007532874" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="4249318017" />
       </map>
     </option>
@@ -454,7 +468,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541176488145" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541176499506" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -521,7 +535,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3290993" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290993" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3290993" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -541,13 +555,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
@@ -562,6 +569,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
