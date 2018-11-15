@@ -2,20 +2,20 @@ package PhoneBook;
 import CSV.*;
 
 abstract class User implements CSV, Comparable<User> {
-    private String SNP; // ФИО
+    private String Name;
     private String phone;
 
-    public User(String SNP, String phone) {
-        setSNP(SNP);
+    public User(String Name, String phone) {
+        setName(Name);
         setPhone(phone);
     }
 
-    public String getSNP() {
-        return SNP;
+    public String getName() {
+        return Name;
     }
 
-    public void setSNP(String SNP) {
-        this.SNP = SNP;
+    public void setName(String SNP) {
+        this.Name = SNP;
     }
 
     public void setPhone(String phone) {
@@ -27,12 +27,10 @@ abstract class User implements CSV, Comparable<User> {
     }
 
     public String toString() {
-        return getSNP() + " " + getPhone();
+        return getName() + " " + getPhone();
     }
 
     public int compareTo(User user) {
-        return SNP.compareTo(user.getSNP());
+        return Name.compareTo(user.getName());
     }
-
-
 }

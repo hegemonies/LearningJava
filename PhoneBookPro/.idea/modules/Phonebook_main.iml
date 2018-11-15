@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="Phonebook:main" external.linked.project.path="$MODULE_DIR$/../../Phonebook" external.root.project.path="$MODULE_DIR$/../../Phonebook" external.system.id="GRADLE" external.system.module.group="PhoneBook" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_9">
     <output url="file://$MODULE_DIR$/../../Phonebook/out/production/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../Phonebook/src/main">

@@ -1,37 +1,102 @@
 package PhoneBook;
 
+import java.io.*;
 import java.util.ArrayList;
 
 public class PhoneBook {
-    ArrayList<User> users = new ArrayList<>();
+    private ArrayList<Entity> entities = new ArrayList<>();
+    private ArrayList<Individual> individuals = new ArrayList<>();
     ArrayList<Call> calls = new ArrayList<>();
     ArrayList<Conference> conferences = new ArrayList<>();
     Statistic statistic = new Statistic();
 
-    public void AddUser(String SNP, String phone, int INIPA) {
-        users.add(new Individual(SNP, phone, INIPA));
+    public void AddEntity(String Name, String phone, int TIN, String address, int CRR, int capital) {
+        entities.add(new Entity(Name, phone, TIN, address, CRR, capital));
     }
 
-    public void AddUser(String SNP, String phone, int TIN, int CRR, long capital) {
-        users.add(new Entity(SNP, phone, TIN, CRR, capital));
+    public void AddIndividual(String Name, String phone, int INIPA) {
+        individuals.add(new Individual(Name, phone, INIPA));
     }
 
-    public void DeleteUser(String SNPorPhone) {
-        ArrayList<User> forDelete = new ArrayList<>();
+    public void DeleteEntity(String Name) {
+        for (Entity entity : entities) {
+            if (entity.getName().equals(Name)) {
+                entities.remove(entity);
+                break;
+            }
+        }
+    }
 
-        for (User user : users) {
-            if (user.getSNP().equals(SNPorPhone)) {
-                forDelete.add(user);
+    public void DeleteIndividual(String Name) {
+        for (Individual individual : individuals) {
+            if (individual.getName().equals(Name)) {
+                individuals.remove(individual);
+                break;
+            }
+        }
+    }
+
+    public void ShowAll() {
+        ShowEntitys();
+        ShowIndividuals();
+    }
+
+    public void ShowEntitys() {
+        System.out.println("List of entity's");
+        System.out.println("Name\t\t\t\t\t\tPhone\t\t\t\tTIN\t\tAddress\t\t\tCRR\t\tCapital");
+        for (Entity entity : entities) {
+            System.out.println(entity.toString());
+        }
+    }
+
+    public void ShowIndividuals() {
+        System.out.println("List of individuals");
+        System.out.println("Name\t\t\t\t\t\tPhone\t\t\t\tINIPA");
+        for (Individual individual : individuals) {
+            System.out.println(individual.toString());
+        }
+    }
+
+    public void toFile(String fileName) {
+        File file = new File(fileName);
+
+        if (file.exists()) {
+            file.delete();
+        } else {
+            try {
+                file.createNewFile();
+            } catch (IOException exc) {
+                System.out.println("Error creating file: " + exc.getMessage());
             }
         }
 
-        users.remove(forDelete.get(0));
+        try (FileWriter writer = new FileWriter(fileName, false)) {
+            writer.write("Type;Name;Phone;INIPA\n");
+            for (Individual individual : individuals) {
+                writer.write(Type.Individual + ";" + individual.toCSV() + "\n");
+            }
+            writer.write("Type;Name;Phone;TIN;Address;CRR;Capital\n");
+            for (Entity entity : entities) {
+                writer.write(Type.Entity + ";" + entity.toCSV() + "\n");
+            }
+        } catch (IOException exc) {
+            System.out.println("Error creating file: " + exc.getMessage());
+        }
     }
 
-    public void Show() {
-        System.out.println("SNP \t\t\tPhone   \t\t\tTIN");
-        for (User user : users) {
-            System.out.println(user.toString());
+    public void fromFile(String fileName) { //TOneverDO
+        File file = new File(fileName);
+
+        if (!file.exists()) {
+            System.out.println("File not found");
+        }
+
+        try (FileReader reader = new FileReader(fileName)) {
+            char[] buffer = new char[(int)file.length()];
+            reader.read(buffer);
+            System.out.println(buffer); // TEST
+        } catch (IOException exc) {
+            System.out.println("Error reading file: " + exc.getMessage());
         }
     }
 }

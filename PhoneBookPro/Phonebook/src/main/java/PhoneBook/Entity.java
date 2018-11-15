@@ -6,13 +6,8 @@ public class Entity extends User {
     private int CRR; // КПП
     private long capital; // уставной капитал
 
-    public Entity(String SNP, String phone, int TIN, int CRR, long capital) {
-        super("", "");
-        setTIN(0);
-    }
-
-    public Entity(String SNP, String phone, int TIN, String address, int CRR, int capital) {
-        super(SNP, phone);
+    public Entity(String Name, String phone, int TIN, String address, int CRR, int capital) {
+        super(Name, phone);
         this.setTIN(TIN);
         this.setAddress(address);
         this.setCRR(CRR);
@@ -47,27 +42,34 @@ public class Entity extends User {
         return capital;
     }
 
-    public void setCapital(int capital) {
+    public void setCapital(long capital) {
         this.capital = capital;
     }
 
     public String toString() {
-        return (super.getSNP()
+        return (super.getName()
                 + "\t" + super.getPhone()
-                + "\t\t" + getTIN()
+                + "\t" + getTIN()
                 + "\t" + getAddress()
                 + "\t" + getCRR()
                 + "\t" + getCapital());
     }
 
     public String toCSV() {
-        return this.getSNP() + ";" + this.getPhone() + ";" + this.getTIN();
+        return this.getName() + ";" + this.getPhone() + ";" + this.getTIN() + ";" + this.getAddress() + ";" + this.getCRR()  + ";" + this.getCapital();
     }
 
     public void fromCSV(String str) {
         String[] strings = str.split(";");
-        setSNP(strings[0]);
+        if (strings.length < 6) {
+            return;
+        }
+
+        setName(strings[0]);
         setPhone(strings[1]);
         setTIN(Integer.valueOf(strings[2]));
+        setAddress(strings[3]);
+        setCRR(Integer.valueOf(strings[4]));
+        setCapital(Long.valueOf(strings[5]));
     }
 }
