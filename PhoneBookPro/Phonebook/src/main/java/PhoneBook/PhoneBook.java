@@ -73,11 +73,11 @@ public class PhoneBook {
         try (FileWriter writer = new FileWriter(fileName, false)) {
             writer.write("Type;Name;Phone;INIPA\n");
             for (Individual individual : individuals) {
-                writer.write(Type.Individual + ";" + individual.toCSV() + "\n");
+                writer.write(TypeUser.Individual + ";" + individual.toCSV() + "\n");
             }
             writer.write("Type;Name;Phone;TIN;Address;CRR;Capital\n");
             for (Entity entity : entities) {
-                writer.write(Type.Entity + ";" + entity.toCSV() + "\n");
+                writer.write(TypeUser.Entity + ";" + entity.toCSV() + "\n");
             }
         } catch (IOException exc) {
             System.out.println("Error creating file: " + exc.getMessage());
@@ -94,7 +94,6 @@ public class PhoneBook {
         try (FileReader reader = new FileReader(fileName)) {
             char[] buffer = new char[(int)file.length()];
             reader.read(buffer);
-//            System.out.println(buffer);
             String raw = new String(buffer);
             String[] rows = raw.split("\n");
 
@@ -103,7 +102,6 @@ public class PhoneBook {
             }
 
             for (String row : rows) {
-//                System.out.println(row);
                 String[] elems = row.split(";");
 
                 if (elems.length < 2) {
@@ -131,5 +129,39 @@ public class PhoneBook {
             System.out.println("Error reading file: " + exc.getMessage());
         }
     }
+
+    public void addCall(int Time, User cgpn, User cdpn, String description) {
+        calls.add(new Call(Time, cgpn, cdpn, description));
+    }
+
+    public void addConference(int Time, User[] users, String description) {
+        conferences.add(new Conference(Time, users, description));
+    }
+
+    public void ShowTotalDuringCalls() {
+        System.out.println("Total During = " + statistic.totalDuring(calls, conferences));
+    }
+
+    public long duringByUser(User user) {
+        long total = 0;
+
+        for (Call call : calls) {
+            if (user.getName().equals(call.getCgpn()) || user.getName().equals(call.getCgpn())) {
+                total += call.getTime();
+            }
+        }
+
+        for (Conference conference : conferences) {
+            for (User tUser : conference.getUsers()) {
+                if (user.getName().equals(tUser.getName())) {
+                    total += conference.getTime();
+                }
+            }
+        }
+
+        return total;
+    }
+
+    public void ShowDuring() {} // TOneverDO
 }
 

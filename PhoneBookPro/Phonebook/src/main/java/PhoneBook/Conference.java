@@ -2,8 +2,14 @@ package PhoneBook;
 
 public class Conference {
     private int Time;
-    User[] users;
-    String description;
+    private User[] users;
+    private String description;
+
+    public Conference(int Time, User[] users, String description) {
+        this.Time = Time;
+        this.users = users;
+        this.description = description;
+    }
 
     public void setTime(int hour, int minute, int seconds) {
         Time = (hour * 60 * 60) + (minute * 60) + seconds;

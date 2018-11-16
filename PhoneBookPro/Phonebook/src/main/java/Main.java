@@ -20,6 +20,15 @@ public class Main {
         PhoneBook pb1 = new PhoneBook();
         pb1.fromFile("test.txt");
         pb1.ShowAll();
+
+        for (int i = 0; i < Math.pow(10, 7); i++) {
+            pb.addCall(i, null, null, "");
+        }
+        for (int i = 0; i < Math.pow(10, 7); i++) {
+            pb.addConference(i, null, "");
+        }
+
+        pb.ShowTotalDuringCalls();
     }
 }
 

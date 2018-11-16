@@ -1,6 +1,6 @@
 package PhoneBook;
 
-public enum Type {
+public enum TypeUser {
     Entity,
     Individual
 }

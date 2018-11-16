@@ -2,9 +2,16 @@ package PhoneBook;
 
 public class Call {
     private int Time;
-    User cgpn;
-    User cdpn;
-    String description;
+    private User cgpn;
+    private User cdpn;
+    private String description;
+
+    public Call(int Time, User cgpn, User cdpn, String description) {
+        this.Time = Time;
+        this.cgpn = cgpn;
+        this.cdpn = cdpn;
+        this.description = description;
+    }
 
     public void setTime(int hour, int minute, int seconds) {
         Time = (hour * 60 * 60) + (minute * 60) + seconds;
