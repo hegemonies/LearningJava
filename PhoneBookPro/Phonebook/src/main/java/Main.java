@@ -13,10 +13,13 @@ public class Main {
 //        pb.AddUser("Petrovich Petr", "+1 222 463 1177", 63636367);
         pb.AddEntity("Super Magazin", "+1 123 717 4444", 2626784, "agag", 544551, 1000000);
 
-        pb.ShowAll();
+//        pb.ShowAll();
 
         pb.toFile("test.txt");
-        pb.fromFile("test.txt");
+
+        PhoneBook pb1 = new PhoneBook();
+        pb1.fromFile("test.txt");
+        pb1.ShowAll();
     }
 }
 

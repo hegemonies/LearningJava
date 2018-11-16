@@ -94,7 +94,39 @@ public class PhoneBook {
         try (FileReader reader = new FileReader(fileName)) {
             char[] buffer = new char[(int)file.length()];
             reader.read(buffer);
-            System.out.println(buffer); // TEST
+//            System.out.println(buffer);
+            String raw = new String(buffer);
+            String[] rows = raw.split("\n");
+
+            if (rows.length < 2) {
+                return;
+            }
+
+            for (String row : rows) {
+//                System.out.println(row);
+                String[] elems = row.split(";");
+
+                if (elems.length < 2) {
+                    continue;
+                }
+
+                try {
+                    if (elems[0].equals("Type")) {
+                        continue;
+                    } else if (elems[0].equals("Individual")) {
+                        individuals.add(new Individual(elems[1], elems[2], Integer.valueOf(elems[3])));
+                    } else if (elems[0].equals("Entity")) {
+                        entities.add(new Entity(elems[1],
+                                elems[2],
+                                Integer.valueOf(elems[3]),
+                                elems[4],
+                                Integer.valueOf(elems[5]),
+                                Integer.valueOf(elems[6])));
+                    }
+                } catch (Exception exc) {
+                    System.out.println("Error: " + exc.getMessage());
+                }
+            }
         } catch (IOException exc) {
             System.out.println("Error reading file: " + exc.getMessage());
         }
