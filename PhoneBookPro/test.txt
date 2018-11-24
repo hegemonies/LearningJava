@@ -1,5 +1,5 @@
-Type;Name;Phone;INIPA
-Individual;Han Solovich;+5 555 955 9945;555759
-Individual;Maximov Maxim;+1 123 345 6789;772722
-Type;Name;Phone;TIN;Address;CRR;Capital
-Entity;Super Magazin;+1 123 717 4444;2626784;agag;544551;1000000
+Type,Name,Phone,INIPA
+Individual,Han Solovich,+5 555 955 9945,555759
+Individual,Maximov Maxim,+1 123 345 6789,772722
+Type,Name,Phone,TIN,Address,CRR,Capital
+Entity,Super Magazin,+1 123 717 4444,2626784,agag,544551,1000000

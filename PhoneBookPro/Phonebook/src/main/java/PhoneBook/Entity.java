@@ -48,19 +48,24 @@ public class Entity extends User {
 
     public String toString() {
         return (super.getName()
-                + "\t" + super.getPhone()
-                + "\t" + getTIN()
-                + "\t" + getAddress()
-                + "\t" + getCRR()
-                + "\t" + getCapital());
+                + " " + super.getPhone()
+                + " " + getTIN()
+                + " " + getAddress()
+                + " " + getCRR()
+                + " " + getCapital());
     }
 
     public String toCSV() {
-        return this.getName() + ";" + this.getPhone() + ";" + this.getTIN() + ";" + this.getAddress() + ";" + this.getCRR()  + ";" + this.getCapital();
+        return this.getName() + "," +
+                this.getPhone() + "," +
+                this.getTIN() + "," +
+                this.getAddress() + "," +
+                this.getCRR()  + "," +
+                this.getCapital();
     }
 
     public void fromCSV(String str) {
-        String[] strings = str.split(";");
+        String[] strings = str.split(",");
         if (strings.length < 6) {
             return;
         }

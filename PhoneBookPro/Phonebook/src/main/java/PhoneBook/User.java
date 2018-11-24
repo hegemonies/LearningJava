@@ -30,6 +30,10 @@ abstract class User implements CSV, Comparable<User> {
         return getName() + " " + getPhone();
     }
 
+    public String toCSV() {
+        return getName() + "," + getPhone();
+    }
+
     public int compareTo(User user) {
         return Name.compareTo(user.getName());
     }

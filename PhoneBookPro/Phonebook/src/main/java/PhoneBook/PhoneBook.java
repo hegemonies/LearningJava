@@ -1,14 +1,17 @@
 package PhoneBook;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PhoneBook {
     private ArrayList<Entity> entities = new ArrayList<>();
     private ArrayList<Individual> individuals = new ArrayList<>();
-    ArrayList<Call> calls = new ArrayList<>();
-    ArrayList<Conference> conferences = new ArrayList<>();
-    Statistic statistic = new Statistic();
+    private ArrayList<Call> calls = new ArrayList<>();
+    private ArrayList<Conference> conferences = new ArrayList<>();
+    private Statistic statistic = new Statistic(calls, conferences);
 
     public void AddEntity(String Name, String phone, int TIN, String address, int CRR, int capital) {
         entities.add(new Entity(Name, phone, TIN, address, CRR, capital));
@@ -36,14 +39,16 @@ public class PhoneBook {
         }
     }
 
-    public void ShowAll() {
+    public void ShowAllUsers() {
         ShowEntitys();
+        System.out.println();
         ShowIndividuals();
+        System.out.println();
     }
 
     public void ShowEntitys() {
         System.out.println("List of entity's");
-        System.out.println("Name\t\t\t\t\t\tPhone\t\t\t\tTIN\t\tAddress\t\t\tCRR\t\tCapital");
+        System.out.println("Name\tPhone\tTIN\tAddress\tCRR\tCapital");
         for (Entity entity : entities) {
             System.out.println(entity.toString());
         }
@@ -51,13 +56,13 @@ public class PhoneBook {
 
     public void ShowIndividuals() {
         System.out.println("List of individuals");
-        System.out.println("Name\t\t\t\t\t\tPhone\t\t\t\tINIPA");
+        System.out.println("Name\tPhone\tINIPA");
         for (Individual individual : individuals) {
             System.out.println(individual.toString());
         }
     }
 
-    public void toFile(String fileName) {
+    public void PhoneBookToFile(String fileName) {
         File file = new File(fileName);
 
         if (file.exists()) {
@@ -71,20 +76,66 @@ public class PhoneBook {
         }
 
         try (FileWriter writer = new FileWriter(fileName, false)) {
-            writer.write("Type;Name;Phone;INIPA\n");
+            writer.write("Type,Name,Phone,INIPA\n");
             for (Individual individual : individuals) {
-                writer.write(TypeUser.Individual + ";" + individual.toCSV() + "\n");
+                writer.write(TypeUser.Individual + "," + individual.toCSV() + "\n");
             }
-            writer.write("Type;Name;Phone;TIN;Address;CRR;Capital\n");
+            writer.write("Type,Name,Phone,TIN,Address,CRR,Capital\n");
             for (Entity entity : entities) {
-                writer.write(TypeUser.Entity + ";" + entity.toCSV() + "\n");
+                writer.write(TypeUser.Entity + "," + entity.toCSV() + "\n");
             }
         } catch (IOException exc) {
             System.out.println("Error creating file: " + exc.getMessage());
         }
     }
 
-    public void fromFile(String fileName) { //TOneverDO
+    private void IndividualsToFile(String fileName) {
+        File file = new File(fileName);
+
+        if (file.exists()) {
+            file.delete();
+        } else {
+            try {
+                file.createNewFile();
+            } catch (IOException exc) {
+                System.out.println("Error creating file: " + exc.getMessage());
+            }
+        }
+
+        try (FileWriter writer = new FileWriter(fileName, false)) {
+            writer.write("Type,Name,Phone,INIPA\n");
+            for (Individual individual : individuals) {
+                writer.write(TypeUser.Individual + "," + individual.toCSV() + "\n");
+            }
+        } catch (IOException exc) {
+            System.out.println("Error creating file: " + exc.getMessage());
+        }
+    }
+
+    private void EntitysToFile(String fileName) {
+        File file = new File(fileName);
+
+        if (file.exists()) {
+            file.delete();
+        } else {
+            try {
+                file.createNewFile();
+            } catch (IOException exc) {
+                System.out.println("Error creating file: " + exc.getMessage());
+            }
+        }
+
+        try (FileWriter writer = new FileWriter(fileName, false)) {
+            writer.write("Type,Name,Phone,TIN,Address,CRR,Capital\n");
+            for (Entity entity : entities) {
+                writer.write(TypeUser.Entity + "," + entity.toCSV() + "\n");
+            }
+        } catch (IOException exc) {
+            System.out.println("Error creating file: " + exc.getMessage());
+        }
+    }
+
+    public void PhoneBookFromFile(String fileName) { //TOneverDO
         File file = new File(fileName);
 
         if (!file.exists()) {
@@ -102,7 +153,7 @@ public class PhoneBook {
             }
 
             for (String row : rows) {
-                String[] elems = row.split(";");
+                String[] elems = row.split(",");
 
                 if (elems.length < 2) {
                     continue;
@@ -130,6 +181,70 @@ public class PhoneBook {
         }
     }
 
+    public void CallsToFile(String fileName) {
+        if (Files.exists(Paths.get(fileName))) {
+            try {
+                Files.delete(Paths.get(fileName));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                Files.createFile(Paths.get(fileName));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try (FileWriter writer = new FileWriter(fileName, false)) {
+            writer.write("Time,CGPN,CDPN,Description\n");
+            for (Call call : calls) {
+                writer.write(call.toCSV() + "\n");
+            }
+        } catch (IOException exc) {
+            System.out.println("Error creating file: " + exc.getMessage());
+        }
+    }
+
+    public void ConferenceToFile(String fileName) {
+        if (Files.exists(Paths.get(fileName))) {
+            try {
+                Files.delete(Paths.get(fileName));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                Files.createFile(Paths.get(fileName));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try (FileWriter writer = new FileWriter(fileName, false)) {
+            writer.write("Time,Users,Description\n");
+            for (Conference conference : conferences) {
+                writer.write(conference.toCSV() + "\n");
+            }
+        } catch (IOException exc) {
+            System.out.println("Error creating file: " + exc.getMessage());
+        }
+    }
+
+    public void ShowCalls() {
+        System.out.println("Time,CGPN,CDPN,Description");
+        for (Call call : calls) {
+            System.out.println(call.toCSV());
+        }
+    }
+
+    public void ShowConferences() {
+        System.out.println("Time,Users,Description");
+        for (Conference conference : conferences) {
+            System.out.println(conference.toCSV());
+        }
+    }
+
     public void addCall(int Time, User cgpn, User cdpn, String description) {
         calls.add(new Call(Time, cgpn, cdpn, description));
     }
@@ -139,29 +254,48 @@ public class PhoneBook {
     }
 
     public void ShowTotalDuringCalls() {
-        System.out.println("Total During = " + statistic.totalDuring(calls, conferences));
+        System.out.println("Total During = " + statistic.getTotalDuring());
     }
 
-    public long duringByUser(User user) {
-        long total = 0;
-
-        for (Call call : calls) {
-            if (user.getName().equals(call.getCgpn()) || user.getName().equals(call.getCgpn())) {
-                total += call.getTime();
-            }
+    public void ShowTotalDuringCallsByAllUsers() {
+        System.out.println("\nList of entity's");
+        System.out.println("Name\tPhone\tTIN\tAddress\tCRR\tCapital");
+        for (Entity entity : entities) {
+            System.out.println(entity.toString() + " " + statistic.getTotalDuringTimeByUser(entity));
         }
 
-        for (Conference conference : conferences) {
-            for (User tUser : conference.getUsers()) {
-                if (user.getName().equals(tUser.getName())) {
-                    total += conference.getTime();
-                }
-            }
+        System.out.println("\nList of individuals");
+        System.out.println("Name\tPhone\tINIPA");
+        for (Individual individual : individuals) {
+            System.out.println(individual.toString() + " " + statistic.getTotalDuringTimeByUser(individual));
         }
-
-        return total;
     }
 
-    public void ShowDuring() {} // TOneverDO
+    public long getTotalDuringTimesAllCalls() {
+        return statistic.getTotalDuring();
+    }
+
+    public long getDuringByUser(User user) {
+        return statistic.getTotalDuringTimeByUser(user);
+    }
+
+    public long getSize(String fileName) {
+        try {
+            return Files.size(Paths.get(fileName));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return -1;
+    }
+
+    public void Backup() {
+        Scanner scanner = new Scanner(System.in);
+
+        String toEntitys = scanner.next();
+        String toIndividuals = scanner.next();
+
+        this.EntitysToFile(toEntitys);
+        this.IndividualsToFile(toIndividuals);
+    }
 }
-

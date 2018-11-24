@@ -1,12 +1,16 @@
 package PhoneBook;
 
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Statistic {
+    ArrayList<Call> calls;
+    ArrayList<Conference> conferences;
+
+    public Statistic(ArrayList<Call> calls, ArrayList<Conference> conferences) {
+        this.calls = calls;
+        this.conferences = conferences;
+    }
+
     static public int During(int... times) {
         int reduce = 0;
 
@@ -16,40 +20,29 @@ public class Statistic {
 
         return reduce;
     }
-/*
-    public long totalDuring(ArrayList<Call> calls, ArrayList<Conference> conferences) {
-        AtomicLong total = new AtomicLong();
 
-//        Lock lock = new ReentrantLock();
+    public long getTotalDuring() {
+        final long[] totalTime = {0, 0};
+
         Runnable runCalls = () -> {
-//            lock.lock();
-            try {
-                total.addAndGet(totalDuringCalls(calls));
-            } catch (NullPointerException exc) {
-                System.out.println("Error: " + exc.getMessage());
-            } finally {
-//                lock.unlock();
-            }
+            totalTime[0] += getTotalDuringCalls();
         };
 
-        new Thread(runCalls).start();
-        total.addAndGet(totalDuringConference(conferences));
+        Thread threadRunCalls = new Thread(runCalls);
+        threadRunCalls.start();
 
-        return total.get();
-    }
-*/
-    public long totalDuring(ArrayList<Call> calls, ArrayList<Conference> conferences) {
-        long total = 0;
+        totalTime[1] += getTotalDuringConference();
+
         try {
-            total += totalDuringCalls(calls);
-            total += totalDuringConference(conferences);
-        } catch (NullPointerException exc) {
-            System.out.println("Error: " + exc.getMessage());
+            threadRunCalls.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        return total;
+
+        return totalTime[0] + totalTime[1];
     }
 
-    public long totalDuringCalls(ArrayList<Call> calls) {
+    public long getTotalDuringCalls() {
         if (calls == null) {
             throw new NullPointerException();
         }
@@ -61,7 +54,7 @@ public class Statistic {
         return total;
     }
 
-    public long totalDuringConference(ArrayList<Conference> conferences) {
+    public long getTotalDuringConference() {
         if (conferences == null) {
             throw new NullPointerException();
         }
@@ -70,6 +63,26 @@ public class Statistic {
         for (Conference conference : conferences) {
             total += conference.getTime();
         }
+        return total;
+    }
+
+    public long getTotalDuringTimeByUser(User user) {
+        long total = 0;
+
+        for (Call call : calls) {
+            if (user.getName().equals(call.getCgpn()) || user.getName().equals(call.getCgpn())) {
+                total += call.getTime();
+            }
+        }
+
+        for (Conference conference : conferences) {
+            for (User tUser : conference.getUsers()) {
+                if (user.getName().equals(tUser.getName())) {
+                    total += conference.getTime();
+                }
+            }
+        }
+
         return total;
     }
 }

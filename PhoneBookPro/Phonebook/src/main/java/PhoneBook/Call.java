@@ -52,4 +52,8 @@ public class Call {
     public User getCgpn() {
         return cgpn;
     }
+
+    public String toCSV() {
+        return Time + "," + cgpn.toString() + "," + cdpn.toString() + "," + description;
+    }
 }

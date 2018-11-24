@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c62eb963-f123-4a7c-a89c-2f2a57e0a6ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Phonebook_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Phonebook_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Phonebook_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Phonebook_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Phonebook/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/out/production/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/Call.class" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/Call.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/Conference.class" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/Conference.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/PhoneBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/PhoneBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/PhoneBook.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/Statistic.class" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/Statistic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/Type.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Call.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Call.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Conference.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Conference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Individual.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Statistic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Statistic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Type.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Phonebook/.gradle/" />
     <ignored path="$PROJECT_DIR$/Phonebook/build/" />
@@ -141,14 +146,45 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1382031511">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="3191" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="3191" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="csv" value="2" />
+          <entry key="java" value="7" />
+          <entry key="txt" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="7" />
+          <entry key="PLAIN_TEXT" value="6" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            <state relative-caret-position="656">
+              <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -156,13 +192,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Statistic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state relative-caret-position="320">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="method#During#0;class#Statistic#0" />
+                <element signature="method#gettotalDuring#0;class#Statistic#0" />
                 <element signature="method#totalDuringCalls#0;class#Statistic#0" />
-                <element signature="method#totalDuringConference#0;class#Statistic#0" />
+                <element signature="method#gettotalDuringConference#0;class#Statistic#0" />
+                <element signature="method#getTotalDuringTimeByUser#0;class#Statistic#0" />
               </folding>
             </state>
           </provider>
@@ -171,21 +208,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="164" column="44" selection-start-line="164" selection-start-column="44" selection-end-line="164" selection-end-column="44" />
+            <state relative-caret-position="1248">
+              <caret line="292" column="49" lean-forward="true" selection-start-line="292" selection-start-column="49" selection-end-line="292" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#AddEntity#0;class#PhoneBook#0" />
                 <element signature="method#AddIndividual#0;class#PhoneBook#0" />
                 <element signature="method#DeleteEntity#0;class#PhoneBook#0" />
                 <element signature="method#DeleteIndividual#0;class#PhoneBook#0" />
-                <element signature="method#ShowAll#0;class#PhoneBook#0" />
+                <element signature="method#ShowAllUsers#0;class#PhoneBook#0" />
                 <element signature="method#ShowEntitys#0;class#PhoneBook#0" />
                 <element signature="method#ShowIndividuals#0;class#PhoneBook#0" />
-                <element signature="method#toFile#0;class#PhoneBook#0" />
-                <element signature="method#fromFile#0;class#PhoneBook#0" />
+                <element signature="method#PhoneBookToFile#0;class#PhoneBook#0" />
+                <element signature="method#IndividualsToFile#0;class#PhoneBook#0" />
+                <element signature="method#EntitysToFile#0;class#PhoneBook#0" />
+                <element signature="method#PhoneBookFromFile#0;class#PhoneBook#0" />
+                <element signature="method#CallsToFile#0;class#PhoneBook#0" />
+                <element signature="method#ConferenceToFile#0;class#PhoneBook#0" />
                 <element signature="method#addCall#0;class#PhoneBook#0" />
                 <element signature="method#addConference#0;class#PhoneBook#0" />
+                <element signature="method#ShowTotalDuringCallsByAllUsers#0;class#PhoneBook#0" />
               </folding>
             </state>
           </provider>
@@ -194,8 +236,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Call.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="432">
+              <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
+              <folding>
+                <element signature="e#1120#1121#0" expanded="true" />
+                <element signature="e#1208#1209#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -203,8 +249,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Conference.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="576">
+              <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+              <folding>
+                <element signature="method#indexOf#0;class#Conference#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,8 +261,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            <state relative-caret-position="416">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -239,7 +288,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$/Phonebook" value="C:\Users\Даниил\.gradle\wrapper\dists\gradle-4.8-bin\divx0s2uj4thofgytb7gf9fsi\gradle-4.8" />
+        <entry key="$PROJECT_DIR$/Phonebook" value="C:\Users\dan-dy\.gradle\wrapper\dists\gradle-4.8-bin\divx0s2uj4thofgytb7gf9fsi\gradle-4.8" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -414,7 +463,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/Phonebook" value="6164692897648" />
+        <entry key="$PROJECT_DIR$/Phonebook" value="6171262716347" />
         <entry key="$PROJECT_DIR$/Phonebook/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/Phonebook/build.gradle" value="1722309365" />
         <entry key="$PROJECT_DIR$/Phonebook/gradle/wrapper/gradle-wrapper.properties" value="2007532874" />
@@ -534,24 +583,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/f.form" />
-        <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/User.java" />
-        <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Individual.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/CSV/CSV.java" />
-        <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Entity.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Type.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/TypeUser.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/TypeSession.java" />
+        <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Statistic.java" />
+        <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/User.java" />
+        <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Entity.java" />
+        <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Individual.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Call.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Conference.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Statistic.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="205" />
-    <option name="y" value="35" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="283" />
+    <option name="y" value="38" />
     <option name="width" value="1179" />
     <option name="height" value="1000" />
   </component>
@@ -605,7 +654,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542375459685" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543067050651" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -686,10 +735,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="205" y="35" width="1179" height="1000" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.204647" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.124200426" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -698,16 +747,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290993" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.32794458" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995381" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.65005416" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39930955" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013405" side_tool="true" weight="0.32794458" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32794458" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32719395" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32719395" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.32995737" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -725,6 +774,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add PhoneBookPro" />
     <option name="LAST_COMMIT_MESSAGE" value="Add PhoneBookPro" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="calls.get(0)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -750,9 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Type.java" />
     <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/TypeSession.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -768,13 +821,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Entity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="58" column="150" selection-start-line="58" selection-start-column="150" selection-end-line="58" selection-end-column="150" />
+        <state relative-caret-position="576">
+          <caret line="66" column="36" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
           <folding>
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="method#toString#0;class#Entity#0" />
+            <element signature="method#toCSV#0;class#Entity#0" />
             <element signature="method#fromCSV#0;class#Entity#0" />
           </folding>
         </state>
@@ -782,73 +842,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Individual.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="320">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
+            <element signature="method#toString#0;class#Individual#0" />
+            <element signature="method#toCSV#0;class#Individual#0" />
+            <element signature="method#fromCSV#0;class#Individual#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Conference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Statistic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        <state relative-caret-position="320">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="method#During#0;class#Statistic#0" />
+            <element signature="method#gettotalDuring#0;class#Statistic#0" />
             <element signature="method#totalDuringCalls#0;class#Statistic#0" />
-            <element signature="method#totalDuringConference#0;class#Statistic#0" />
+            <element signature="method#gettotalDuringConference#0;class#Statistic#0" />
+            <element signature="method#getTotalDuringTimeByUser#0;class#Statistic#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
+          <folding>
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Conference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding>
+            <element signature="method#indexOf#0;class#Conference#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Calls.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Conference.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="164" column="44" selection-start-line="164" selection-start-column="44" selection-end-line="164" selection-end-column="44" />
+        <state relative-caret-position="1248">
+          <caret line="292" column="49" lean-forward="true" selection-start-line="292" selection-start-column="49" selection-end-line="292" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#AddEntity#0;class#PhoneBook#0" />
             <element signature="method#AddIndividual#0;class#PhoneBook#0" />
             <element signature="method#DeleteEntity#0;class#PhoneBook#0" />
             <element signature="method#DeleteIndividual#0;class#PhoneBook#0" />
-            <element signature="method#ShowAll#0;class#PhoneBook#0" />
+            <element signature="method#ShowAllUsers#0;class#PhoneBook#0" />
             <element signature="method#ShowEntitys#0;class#PhoneBook#0" />
             <element signature="method#ShowIndividuals#0;class#PhoneBook#0" />
-            <element signature="method#toFile#0;class#PhoneBook#0" />
-            <element signature="method#fromFile#0;class#PhoneBook#0" />
+            <element signature="method#PhoneBookToFile#0;class#PhoneBook#0" />
+            <element signature="method#IndividualsToFile#0;class#PhoneBook#0" />
+            <element signature="method#EntitysToFile#0;class#PhoneBook#0" />
+            <element signature="method#PhoneBookFromFile#0;class#PhoneBook#0" />
+            <element signature="method#CallsToFile#0;class#PhoneBook#0" />
+            <element signature="method#ConferenceToFile#0;class#PhoneBook#0" />
             <element signature="method#addCall#0;class#PhoneBook#0" />
             <element signature="method#addConference#0;class#PhoneBook#0" />
+            <element signature="method#ShowTotalDuringCallsByAllUsers#0;class#PhoneBook#0" />
           </folding>
         </state>
       </provider>

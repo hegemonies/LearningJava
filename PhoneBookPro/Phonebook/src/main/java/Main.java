@@ -13,22 +13,34 @@ public class Main {
 //        pb.AddUser("Petrovich Petr", "+1 222 463 1177", 63636367);
         pb.AddEntity("Super Magazin", "+1 123 717 4444", 2626784, "agag", 544551, 1000000);
 
-//        pb.ShowAll();
-
-        pb.toFile("test.txt");
+        pb.PhoneBookToFile("test.txt");
 
         PhoneBook pb1 = new PhoneBook();
-        pb1.fromFile("test.txt");
-        pb1.ShowAll();
+        pb1.PhoneBookFromFile("test.txt");
+        pb1.ShowAllUsers();
 
-        for (int i = 0; i < Math.pow(10, 7); i++) {
-            pb.addCall(i, null, null, "");
-        }
-        for (int i = 0; i < Math.pow(10, 7); i++) {
-            pb.addConference(i, null, "");
+//        pb.ShowTotalDuringCalls();
+
+//        pb.ShowTotalDuringCallsByAllUsers();
+
+        for (int i = 0; i < 10; i++) {
+            pb.addCall(i, new Individual("a", "b", 0), new Individual("a", "b", 0), "afaf");
         }
 
-        pb.ShowTotalDuringCalls();
+        for (int i = 0; i < 10; i++) {
+            Individual[] individuals = new Individual[2];
+            individuals[0] = new Individual("a", "b", 0);
+            individuals[1] = new Individual("c", "d", 1);
+            pb.addConference(i, individuals, "afaf");
+        }
+
+        System.out.println("Calls:");
+        pb.ShowCalls();
+        System.out.println("\nConference:");
+        pb.ShowConferences();
+
+        pb.CallsToFile("Calls.csv");
+        pb.ConferenceToFile("Conference.csv");
     }
 }
 

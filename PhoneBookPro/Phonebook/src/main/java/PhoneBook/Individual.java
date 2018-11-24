@@ -17,15 +17,19 @@ public class Individual extends User {
     }
 
     public String toString() {
-        return (super.getName() + "\t\t\t\t" + super.getPhone() + "\t\t" + getINIPA());
+        return super.getName() + " " +
+                super.getPhone() + " " +
+                getINIPA();
     }
 
     public String toCSV() {
-        return this.getName() + ";" + this.getPhone() + ";" + this.getINIPA();
+        return this.getName() + "," +
+                this.getPhone() + "," +
+                this.getINIPA();
     }
 
     public void fromCSV(String str) {
-        String[] strings = str.split(";");
+        String[] strings = str.split(",");
         setName(strings[0]);
         setPhone(strings[1]);
         setINIPA(Integer.valueOf(strings[2]));
