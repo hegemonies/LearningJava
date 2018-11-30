@@ -5,8 +5,18 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../Phonebook/src/main">
       <sourceFolder url="file://$MODULE_DIR$/../../Phonebook/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Phonebook/src/main/resources" type="java-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Phonebook/libs/mysql-connector-java-8.0.13.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

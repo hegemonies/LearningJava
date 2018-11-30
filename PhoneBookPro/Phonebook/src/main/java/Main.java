@@ -1,5 +1,5 @@
 import PhoneBook.*;
-import CSV.*;
+import java.sql.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,6 +41,29 @@ public class Main {
 
         pb.CallsToFile("Calls.csv");
         pb.ConferenceToFile("Conference.csv");
+
+        System.out.println();
+
+        String user = "root";
+        String password = "1234";
+
+        String fix = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+        String url = "jdbc:mysql://localhost:3306/phonebook" + fix;
+
+        try {
+            Connection connection = DriverManager.getConnection(url, user, password);
+            Statement statement = connection.createStatement();
+            String query = "select * from Entity";
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                String Name = resultSet.getString("Name");
+                System.out.println(Name);
+            }
+            System.out.println("Success");
+        } catch (Exception exc) {
+            System.out.println("Error: " + exc.getMessage());
+        }
     }
 }
 
