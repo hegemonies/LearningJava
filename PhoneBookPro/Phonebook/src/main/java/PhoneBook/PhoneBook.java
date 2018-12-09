@@ -1,6 +1,12 @@
 package PhoneBook;
 
-import java.io.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -12,6 +18,7 @@ public class PhoneBook {
     private ArrayList<Call> calls = new ArrayList<>();
     private ArrayList<Conference> conferences = new ArrayList<>();
     private Statistic statistic = new Statistic(calls, conferences);
+    private static final Logger log = LogManager.getLogger(PhoneBook.class);
 
     public void AddEntity(String Name, String phone, int TIN, String address, int CRR, int capital) {
         entities.add(new Entity(Name, phone, TIN, address, CRR, capital));
@@ -47,18 +54,18 @@ public class PhoneBook {
     }
 
     public void ShowEntitys() {
-        System.out.println("List of entity's");
-        System.out.println("Name\tPhone\tTIN\tAddress\tCRR\tCapital");
+        log.info("List of entity's");
+        log.info("Name\tPhone\tTIN\tAddress\tCRR\tCapital");
         for (Entity entity : entities) {
-            System.out.println(entity.toString());
+            log.info(entity.toString());
         }
     }
 
     public void ShowIndividuals() {
-        System.out.println("List of individuals");
-        System.out.println("Name\tPhone\tINIPA");
+        log.info("List of individuals");
+        log.info("Name\tPhone\tINIPA");
         for (Individual individual : individuals) {
-            System.out.println(individual.toString());
+            log.info(individual.toString());
         }
     }
 
@@ -71,7 +78,7 @@ public class PhoneBook {
             try {
                 file.createNewFile();
             } catch (IOException exc) {
-                System.out.println("Error creating file: " + exc.getMessage());
+                log.error("Error creating file in PhoneBookToFile(): " + exc.getMessage());
             }
         }
 
@@ -85,7 +92,7 @@ public class PhoneBook {
                 writer.write(TypeUser.Entity + "," + entity.toCSV() + "\n");
             }
         } catch (IOException exc) {
-            System.out.println("Error creating file: " + exc.getMessage());
+            log.error("Error open file in PhoneBookToFile(): " + exc.getMessage());
         }
     }
 
@@ -98,7 +105,7 @@ public class PhoneBook {
             try {
                 file.createNewFile();
             } catch (IOException exc) {
-                System.out.println("Error creating file: " + exc.getMessage());
+                log.error("Error creating file in IndividualsToFile(): " + exc.getMessage());
             }
         }
 
@@ -108,7 +115,7 @@ public class PhoneBook {
                 writer.write(TypeUser.Individual + "," + individual.toCSV() + "\n");
             }
         } catch (IOException exc) {
-            System.out.println("Error creating file: " + exc.getMessage());
+            log.error("Error open file in IndividualsToFile(): " + exc.getMessage());
         }
     }
 
@@ -121,7 +128,7 @@ public class PhoneBook {
             try {
                 file.createNewFile();
             } catch (IOException exc) {
-                System.out.println("Error creating file: " + exc.getMessage());
+                log.error("Error creating file in EntitysToFile(): " + exc.getMessage());
             }
         }
 
@@ -131,15 +138,15 @@ public class PhoneBook {
                 writer.write(TypeUser.Entity + "," + entity.toCSV() + "\n");
             }
         } catch (IOException exc) {
-            System.out.println("Error creating file: " + exc.getMessage());
+            log.error("Error open file in EntitysToFile(): " + exc.getMessage());
         }
     }
 
-    public void PhoneBookFromFile(String fileName) { //TOneverDO
+    public void PhoneBookFromFile(String fileName) {
         File file = new File(fileName);
 
         if (!file.exists()) {
-            System.out.println("File not found");
+            log.debug("File not found in PhoneBookFromFile()");
         }
 
         try (FileReader reader = new FileReader(fileName)) {
@@ -173,11 +180,11 @@ public class PhoneBook {
                                 Integer.valueOf(elems[6])));
                     }
                 } catch (Exception exc) {
-                    System.out.println("Error: " + exc.getMessage());
+                    log.error("Error add user in PhoneBookFromFile(): " + exc.getMessage());
                 }
             }
         } catch (IOException exc) {
-            System.out.println("Error reading file: " + exc.getMessage());
+            log.error("Error open file in PhoneBookFromFile(): " + exc.getMessage());
         }
     }
 
@@ -186,13 +193,13 @@ public class PhoneBook {
             try {
                 Files.delete(Paths.get(fileName));
             } catch (IOException e) {
-                e.printStackTrace();
+                log.info("Error delete file in CallsToFile(): " + e.getMessage());
             }
         } else {
             try {
                 Files.createFile(Paths.get(fileName));
             } catch (IOException e) {
-                e.printStackTrace();
+                log.info("Error create file in CallsToFile(): " + e.getMessage());
             }
         }
 
@@ -202,7 +209,7 @@ public class PhoneBook {
                 writer.write(call.toCSV() + "\n");
             }
         } catch (IOException exc) {
-            System.out.println("Error creating file: " + exc.getMessage());
+            log.info("Error open file in CallsToFile(): " + exc.getMessage());
         }
     }
 
@@ -211,13 +218,13 @@ public class PhoneBook {
             try {
                 Files.delete(Paths.get(fileName));
             } catch (IOException e) {
-                e.printStackTrace();
+                log.info("Error delete file in ConferenceToFile(): " + e.getMessage());
             }
         } else {
             try {
                 Files.createFile(Paths.get(fileName));
             } catch (IOException e) {
-                e.printStackTrace();
+                log.info("Error create file in ConferenceToFile(): " + e.getMessage());
             }
         }
 
@@ -227,21 +234,21 @@ public class PhoneBook {
                 writer.write(conference.toCSV() + "\n");
             }
         } catch (IOException exc) {
-            System.out.println("Error creating file: " + exc.getMessage());
+            log.info("Error open file in ConferenceToFile(): " + exc.getMessage());
         }
     }
 
     public void ShowCalls() {
-        System.out.println("Time,CGPN,CDPN,Description");
+        log.info("Time,CGPN,CDPN,Description");
         for (Call call : calls) {
-            System.out.println(call.toCSV());
+            log.info(call.toCSV());
         }
     }
 
     public void ShowConferences() {
-        System.out.println("Time,Users,Description");
+        log.info("Time,Users,Description");
         for (Conference conference : conferences) {
-            System.out.println(conference.toCSV());
+            log.info(conference.toCSV());
         }
     }
 
@@ -254,20 +261,20 @@ public class PhoneBook {
     }
 
     public void ShowTotalDuringCalls() {
-        System.out.println("Total During = " + statistic.getTotalDuring());
+        log.info("Total During = " + statistic.getTotalDuring());
     }
 
     public void ShowTotalDuringCallsByAllUsers() {
-        System.out.println("\nList of entity's");
-        System.out.println("Name\tPhone\tTIN\tAddress\tCRR\tCapital");
+        log.info("\nList of entity's");
+        log.info("Name\tPhone\tTIN\tAddress\tCRR\tCapital");
         for (Entity entity : entities) {
-            System.out.println(entity.toString() + " " + statistic.getTotalDuringTimeByUser(entity));
+            log.info(entity.toString() + " " + statistic.getTotalDuringTimeByUser(entity));
         }
 
-        System.out.println("\nList of individuals");
-        System.out.println("Name\tPhone\tINIPA");
+        log.info("\nList of individuals");
+        log.info("Name\tPhone\tINIPA");
         for (Individual individual : individuals) {
-            System.out.println(individual.toString() + " " + statistic.getTotalDuringTimeByUser(individual));
+            log.info(individual.toString() + " " + statistic.getTotalDuringTimeByUser(individual));
         }
     }
 
@@ -283,7 +290,7 @@ public class PhoneBook {
         try {
             return Files.size(Paths.get(fileName));
         } catch (IOException e) {
-            e.printStackTrace();
+            log.info("Error in getSize(): " + e.getMessage());
         }
 
         return -1;
