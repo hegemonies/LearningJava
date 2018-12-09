@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c62eb963-f123-4a7c-a89c-2f2a57e0a6ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Phonebook_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Phonebook_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/Phonebook_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Phonebook_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook/log4j2-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/resources/log4j2-test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Phonebook/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/out/production/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/PhoneBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/out/production/classes/PhoneBook/PhoneBook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook/out/production/resources/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Phonebook/src/main/resources/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Phonebook/.gradle/" />
     <ignored path="$PROJECT_DIR$/Phonebook/build/" />
@@ -106,14 +102,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="6" />
-          <entry key="java" value="7746" />
+          <entry key="java" value="7775" />
           <entry key="txt" value="44" />
+          <entry key="xml" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7746" />
+          <entry key="JAVA" value="7775" />
           <entry key="PLAIN_TEXT" value="50" />
+          <entry key="XML" value="48" />
         </counts>
       </usages-collector>
     </session>
@@ -183,8 +181,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="13">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,28 +191,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Phonebook/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Phonebook/src/main/resources/log4j.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="282" column="5" lean-forward="true" selection-start-line="282" selection-start-column="5" selection-end-line="282" selection-end-column="5" />
+            <state relative-caret-position="912">
+              <caret line="57" column="42" lean-forward="true" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#9025#9026#0" expanded="true" />
@@ -228,11 +208,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Phonebook/log4j2-test.xml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Phonebook/src/main/resources/log4j2-test.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            <state relative-caret-position="224">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -291,6 +271,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>System.out</find>
+      <find>ShowAllUsers</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -609,13 +590,14 @@
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Individual.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Call.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/Conference.java" />
-        <option value="$PROJECT_DIR$/Phonebook/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java" />
         <option value="$PROJECT_DIR$/Phonebook/log4j-2-test.xml" />
         <option value="$PROJECT_DIR$/Phonebook/log4j.configurationFile" />
         <option value="$PROJECT_DIR$/Phonebook/log4j2-test.xml" />
         <option value="$PROJECT_DIR$/Phonebook/build.gradle" />
         <option value="$PROJECT_DIR$/Phonebook/src/main/resources/log4j.xml" />
+        <option value="$PROJECT_DIR$/Phonebook/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/Phonebook/src/main/resources/log4j2-test.xml" />
       </list>
     </option>
   </component>
@@ -668,6 +650,13 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="PhoneBook" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Phonebook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phonebook" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -685,8 +674,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\git\LearningJava\PhoneBookPro\Phonebook" />
       <recent name="D:\git\LearningJava\PhoneBookPro\Phonebook\src\main\resources" />
+      <recent name="D:\git\LearningJava\PhoneBookPro\Phonebook" />
       <recent name="D:\git\LearningJava\PhoneBookPro\Phonebook\src" />
       <recent name="D:\git\LearningJava\PhoneBookPro\Phonebook\src\main\java" />
       <recent name="D:\git\LearningJava\PhoneBookPro\Phonebook\src\main\java\PhoneBook" />
@@ -776,8 +765,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12739871" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12739871" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -786,14 +776,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290993" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49776587" visible="true" weight="0.29934925" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49733475" visible="true" weight="0.29067245" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39930955" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50223416" side_tool="true" weight="0.64859" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5026652" side_tool="true" weight="0.29934925" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.3264642" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3264642" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -918,16 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Calls.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -956,10 +936,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Phonebook/out/production/resources/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/resources/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Phonebook/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/PhoneBook/PhoneBook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="282" column="5" lean-forward="true" selection-start-line="282" selection-start-column="5" selection-end-line="282" selection-end-column="5" />
+        <state relative-caret-position="912">
+          <caret line="57" column="42" lean-forward="true" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#9025#9026#0" expanded="true" />
@@ -972,27 +969,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Phonebook/log4j2-test.xml">
+    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="13">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Phonebook/build.gradle">
+    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/resources/log4j2-test.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Phonebook/out/production/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Phonebook/src/main/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="224">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
         </state>
       </provider>
     </entry>
