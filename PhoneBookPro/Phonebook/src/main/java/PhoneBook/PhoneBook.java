@@ -3,6 +3,8 @@ package PhoneBook;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -299,7 +301,9 @@ public class PhoneBook {
     public void Backup() {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Enter file name for Entity's: ");
         String toEntitys = scanner.next();
+        System.out.println("Enter file name for Individuals: ");
         String toIndividuals = scanner.next();
 
         this.EntitysToFile(toEntitys);
