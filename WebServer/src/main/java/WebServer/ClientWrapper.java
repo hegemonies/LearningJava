@@ -79,27 +79,29 @@ public class ClientWrapper implements Runnable{
             DateFormat df = DateFormat.getTimeInstance();
             df.setTimeZone(TimeZone.getTimeZone("GMT"));
 
-//            String answer = "OK:200\r\nContentLength:1024\r\n" + (new String(buffer));
-            String answer = "HTTP/1.1 200 OK\r\n" +
-                    "Date: " + df.format(new Date()) + "\r\n" +
-                    "Server: WebServerEngine\r\n" +
-                    "Content-Language: eng\r\n" +
-                    "Content-Type: text/html; charset=utf-8\r\n" +
-                    "ContentLength: " + fileLenght + "\r\n" +
-                    "Connection: close\r\n" +
-                    "\r\n" +
-                    "<html lang=\"en\">\r\n" +
-                    "<head>\r\n" +
-                    "    <meta charset=\"UTF-8\">\r\n" +
-                    "    <title>Hello</title>\r\n" +
-                    "</head>\r\n" +
-                    "<body style=\"padding: 0; margin: 0; width: 100%; height: 100%\">\r\n" +
-                    " <h3 style=\"margin-left:150px; margin-top: 150px;\">Hello</h3>\r\n" +
-                    "</body>\r\n" +
-                    "</html>\r\n";
+            String answer = "HTTP/1.1 200 OK\r\nContentLength: " + fileLenght + "\r\n\r\n" + (new String(buffer));
+//            String answer = "HTTP/1.1 200 OK\r\n" +
+//                    "ContentLength: " + fileLenght + "\r\n" +
+//                    "\r\n" +
+//                    "<!DOCTYPE html>\r\n" +
+//                    "<html lang=\"en\">\r\n" +
+//                    "<head>\r\n" +
+//                    "    <meta charset=\"UTF-8\">\r\n" +
+//                    "    <title>Hello</title>\r\n" +
+//                    "</head>\r\n" +
+//                    "<body style=\"padding: 0; margin: 0; width: 100%; height: 100%\">\r\n" +
+//                    " <h3 style=\"margin-left:150px; margin-top: 150px;\">Hello</h3>\r\n" +
+//                    "</body>\r\n" +
+//                    "</html>\r";
             log.debug("answer = " + answer);
 
-            out.print(answer);
+            out.println(answer);
+            out.flush();
+            try {
+                client.close();
+            } catch (IOException exc) {
+                log.debug("Error close client socket: " + exc.getMessage());
+            }
         }
     }
 }
