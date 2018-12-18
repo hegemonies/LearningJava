@@ -1,5 +1,7 @@
 package PhoneBook;
 
+import com.google.gson.Gson;
+
 public class Individual extends User {
     private int INIPA; // СНИЛС
 
@@ -33,5 +35,13 @@ public class Individual extends User {
         setName(strings[0]);
         setPhone(strings[1]);
         setINIPA(Integer.valueOf(strings[2]));
+    }
+
+    public String toJSON() {
+        return new Gson().toJson(this);
+    }
+
+    public static Individual fromJSON(String json) {
+        return new Gson().fromJson(json, Individual.class);
     }
 }

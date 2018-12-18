@@ -29,7 +29,8 @@ public class Main {
 //        pb.ShowTotalDuringCallsByAllUsers();
 
         for (int i = 0; i < 10; i++) {
-            pb.addCall(i, new Individual("a", "b", 0), new Individual("a", "b", 0), "afaf");
+            pb.addCall(i, new Individual("a", "b", 0),
+                    new Individual("a", "b", 0), "afaf");
         }
 
         for (int i = 0; i < 10; i++) {

@@ -1,5 +1,7 @@
 package PhoneBook;
 
+import com.google.gson.*;
+
 public class Entity extends User {
     private int TIN; // ИНН
     private String address;
@@ -76,5 +78,13 @@ public class Entity extends User {
         setAddress(strings[3]);
         setCRR(Integer.valueOf(strings[4]));
         setCapital(Long.valueOf(strings[5]));
+    }
+
+    public String toJSON() {
+        return new Gson().toJson(this);
+    }
+
+    public static Entity fromJSON(String json) {
+        return new Gson().fromJson(json, Entity.class);
     }
 }
