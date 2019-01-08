@@ -3,10 +3,11 @@ package PhoneBook;
 import com.google.gson.*;
 
 public class Entity extends User {
-    private int TIN; // ИНН
+    private static int id = 0;
+    private int TIN; //
     private String address;
-    private int CRR; // КПП
-    private long capital; // уставной капитал
+    private int CRR; //
+    private long capital; //
 
     public Entity(String Name, String phone, int TIN, String address, int CRR, int capital) {
         super(Name, phone);
@@ -14,6 +15,7 @@ public class Entity extends User {
         this.setAddress(address);
         this.setCRR(CRR);
         this.setCapital(capital);
+        id++;
     }
 
     public int getTIN() {

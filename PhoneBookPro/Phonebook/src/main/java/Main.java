@@ -1,5 +1,4 @@
-import PhoneBook.Individual;
-import PhoneBook.PhoneBook;
+import PhoneBook.*;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
