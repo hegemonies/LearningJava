@@ -1,6 +1,6 @@
 package PhoneBook;
 
-import com.google.gson.*;
+//import com.google.gson.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -99,7 +99,7 @@ public class LegalEntity extends User {
         setCRR(Integer.valueOf(strings[4]));
         setCapital(Long.valueOf(strings[5]));
     }
-
+/*
     public String toJSON() {
         return new Gson().toJson(this);
     }
@@ -107,4 +107,5 @@ public class LegalEntity extends User {
     public static Entity fromJSON(String json) {
         return new Gson().fromJson(json, Entity.class);
     }
+*/
 }

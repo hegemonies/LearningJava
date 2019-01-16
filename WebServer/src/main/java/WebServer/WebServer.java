@@ -19,7 +19,7 @@ public class WebServer {
         try {
             socket = new ServerSocket(port);
             log.info("Server upped");
-            this.Run();
+            Run();
         } catch (IOException exc) {
             log.fatal("Can't up the server: " + exc.getMessage());
         }
