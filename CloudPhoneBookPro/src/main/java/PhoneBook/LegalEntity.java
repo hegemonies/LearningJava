@@ -16,16 +16,25 @@ public class LegalEntity extends User {
     private int CRR; // Capital Requirements Regulation
     private long capital; //
 
-    public LegalEntity() {
-    }
+//    public LegalEntity() {
+//    }
 
-    public LegalEntity(String Name, String phone, int TIN, String address, int CRR, int capital) {
+//    public LegalEntity(String Name, String phone, int TIN, String address, int CRR, int capital) {
+//        super(Name, phone);
+//        this.setTIN(TIN);
+//        this.setAddress(address);
+//        this.setCRR(CRR);
+//        this.setCapital(capital);
+//        id++;
+//    }
+
+
+    public LegalEntity(String Name, String phone, int TIN, String address, int CRR, long capital) {
         super(Name, phone);
-        this.setTIN(TIN);
-        this.setAddress(address);
-        this.setCRR(CRR);
-        this.setCapital(capital);
-        id++;
+        this.TIN = TIN;
+        this.address = address;
+        this.CRR = CRR;
+        this.capital = capital;
     }
 
     public static Integer getId() {
