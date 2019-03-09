@@ -9,17 +9,17 @@ public class Main {
     static HashSet<Integer> hashSet = new HashSet<>();
     static TreeMap<Integer, Integer> treeMap = new TreeMap<>();
     static HashMap<Integer, Integer> hashMap = new HashMap<>();
-    static int size = 15000000;
+    static int size = 12000000;
 
     public static void main(String... args) {
-//        goParallel();
-        goSerial();
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-//        try {
-//            Thread.sleep(2000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        goParallel();
+//        goSerial();
     }
 
     private static void goParallel() {
@@ -33,6 +33,8 @@ public class Main {
 
             elapsedTime += System.nanoTime();
             System.out.println("Elapsed time of array list = " + (elapsedTime / Math.pow(10, 9)) + " sec");
+
+            arrayList.clear();
         }).start(); // array list
 
         new Thread(() -> {
@@ -45,6 +47,7 @@ public class Main {
 
             elapsedTime += System.nanoTime();
             System.out.println("Elapsed time of linked list = " + (elapsedTime / Math.pow(10, 9)) + " sec");
+            linkedList.clear();
         }).start(); // linked list
 
         new Thread(() -> {
@@ -57,6 +60,7 @@ public class Main {
 
             elapsedTime += System.nanoTime();
             System.out.println("Elapsed time of tree set = " + (elapsedTime / Math.pow(10, 9)) + " sec");
+            treeSet.clear();
         }).start(); // tree set
 
         new Thread(() -> {
@@ -69,6 +73,7 @@ public class Main {
 
             elapsedTime += System.nanoTime();
             System.out.println("Elapsed time of hash set = " + (elapsedTime / Math.pow(10, 9)) + " sec");
+            hashSet.clear();
         }).start(); // hash set
 
         new Thread(() -> {
@@ -81,6 +86,7 @@ public class Main {
 
             elapsedTime += System.nanoTime();
             System.out.println("Elapsed time of tree map = " + (elapsedTime / Math.pow(10, 9)) + " sec");
+            treeMap.clear();
         }).start(); // tree map
 
         new Thread(() -> {
@@ -93,6 +99,7 @@ public class Main {
 
             elapsedTime += System.nanoTime();
             System.out.println("Elapsed time of hash map = " + (elapsedTime / Math.pow(10, 9)) + " sec");
+            hashMap.clear();
         }).start(); // hash map
     }
 
@@ -106,9 +113,10 @@ public class Main {
         }
 
         elapsedTime += System.nanoTime();
-        System.out.println("Elapsed time for the method of adding a array list = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
-        arrayList.removeIf(item -> item > 0);
+        arrayList.clear();
+
+        System.out.println("Elapsed time for the method of adding a array list = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         elapsedTime = 0;
         elapsedTime -= System.nanoTime();
@@ -118,9 +126,10 @@ public class Main {
         }
 
         elapsedTime += System.nanoTime();
-        System.out.println("Elapsed time for the method of adding a linked list = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         linkedList.clear();
+
+        System.out.println("Elapsed time for the method of adding a linked list = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         elapsedTime = 0;
         elapsedTime -= System.nanoTime();
@@ -130,9 +139,10 @@ public class Main {
         }
 
         elapsedTime += System.nanoTime();
-        System.out.println("Elapsed time for the method of adding a tree set = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         treeSet.clear();
+
+        System.out.println("Elapsed time for the method of adding a tree set = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         elapsedTime = 0;
         elapsedTime -= System.nanoTime();
@@ -142,9 +152,10 @@ public class Main {
         }
 
         elapsedTime += System.nanoTime();
-        System.out.println("Elapsed time for the method of adding a hash set = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         hashSet.clear();
+
+        System.out.println("Elapsed time for the method of adding a hash set = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         elapsedTime = 0;
         elapsedTime -= System.nanoTime();
@@ -154,9 +165,10 @@ public class Main {
         }
 
         elapsedTime += System.nanoTime();
-        System.out.println("Elapsed time for the method of adding a tree map = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         treeMap.clear();
+
+        System.out.println("Elapsed time for the method of adding a tree map = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         elapsedTime = 0;
         elapsedTime -= System.nanoTime();
@@ -166,8 +178,9 @@ public class Main {
         }
 
         elapsedTime += System.nanoTime();
-        System.out.println("Elapsed time for the method of adding a hash map = " + (elapsedTime / Math.pow(10, 9)) + " sec");
 
         hashMap.clear();
+
+        System.out.println("Elapsed time for the method of adding a hash map = " + (elapsedTime / Math.pow(10, 9)) + " sec");
     }
 }
