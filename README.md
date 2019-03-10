@@ -7,4 +7,4 @@
 	TRAPI: Test of the REST API
 	WebServer: This is a just simple mulpithreads server on sockets
 	LoggerCI: Simple logger with using maven
-	CloudPhoneBookPro: This is a PhoneBookPro with using a Spring Boot
+	CPB (Cloud Phone Book): This is a Phone Book with using a Spring Boot, MongoDB, REST API, log4j, gson
