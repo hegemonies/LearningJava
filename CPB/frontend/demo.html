@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Demo</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		
+	</head>
+
+	<body>
+		<div id="adding">
+			Добавление данных о частном предпринимателе в телефонную книгу
+			<form>
+				<input type="text" size="30" name="Name" value="Name">
+				<input type="text" size="12" name="Phone" value="Phone">
+				<input type="number" size="8" name="INIPA" value="0">
+				<input type="button" value="Add" onclick="add(this.form)">
+			</form>
+		</div>
+		<div id="info-of-individuals">
+			Список частных предпринимателей
+			<button value="Reload" onclick="reloadList()">Reload</button>
+			<p id="list-of-individuals"></p>
+		</div>
+
+		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/handler.js"></script>
+	</body>
+</html>
