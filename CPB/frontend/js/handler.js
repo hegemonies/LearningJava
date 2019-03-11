@@ -28,11 +28,20 @@ function reloadList() {
 	// 	$('#list-of-individuals').html(msg);
 	// });
 
-	$.getJSON("http://localhost:8080/showAll").done(function(data) {
-		console.log(data);
-	});
-}
+	// $.getJSON("http://localhost:8080/showAll").done(function(data) {
+	// 	console.log(data);
+	// });
 
+	$.ajax({
+		type: "POST",
+		dataType: "text",
+		url: "http://localhost:8080/showAll"
+	}).then(function(data) {
+		// console.log(data);
+		$('#list-of-individuals').html(data);
+	}) 
+}
+/*
 $(document).ready(function() {
     $.ajax({
         url: "http://localhost:8080/showAll"
@@ -40,3 +49,4 @@ $(document).ready(function() {
        $('#list-of-individuals').append(data);
     });
 });
+*/
