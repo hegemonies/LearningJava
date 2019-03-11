@@ -31,4 +31,12 @@ public class Controller {
     public List<Individual> showAll() {
         return repoIndividuals.findAll();
     }
+
+    // to-do: don't work
+//    @RequestMapping("/removeUser")
+//    public String removeUser(@RequestParam(value = "Name", required = true) String Name) {
+//        repoIndividuals.delete(repoIndividuals.findByName(Name));
+//
+//        return "removed";
+//    }
 }

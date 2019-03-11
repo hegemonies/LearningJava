@@ -10,28 +10,6 @@ function add(form) {
 }
 
 function reloadList() {
-	// $.ajax({
-	// 	url: "http://localhost:8080/showAll"
-	// }).then(function(data) {
-	// 	$('#list-of-individuals').append(data.name);
-	// 	$('#list-of-individuals').append(data.phone);
-	// 	$('#list-of-individuals').append(data.INIPA);
-	// 	// console.log(data);
-	// });
-
-	// $.getJSON("http://localhost:8080/showAll").done(function(data) {
-	// 	var msg;
-	// 	$.each(data, function(key, val) {
-	// 		msg += '<div>' + key + ' ' + val + '</div>';
-	// 	});
-	// 	msg += '<br>';
-	// 	$('#list-of-individuals').html(msg);
-	// });
-
-	// $.getJSON("http://localhost:8080/showAll").done(function(data) {
-	// 	console.log(data);
-	// });
-
 	$.ajax({
 		type: "POST",
 		dataType: "text",
@@ -41,6 +19,15 @@ function reloadList() {
 		$('#list-of-individuals').html(data);
 	}) 
 }
+
+function removeUser(name) {
+	$.ajax({
+		type: "DELETE",
+		dataType: "text",
+		url: "http://localhost:8080/removeUser?Name=" + name
+	})
+}
+
 /*
 $(document).ready(function() {
     $.ajax({
