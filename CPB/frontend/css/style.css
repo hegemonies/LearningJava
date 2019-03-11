@@ -2,6 +2,8 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-#list-of-individuals {
-	width: 50%;
+div {
+	width: 600px;
+	padding: 0;
+	margin: 20px auto;
 }
