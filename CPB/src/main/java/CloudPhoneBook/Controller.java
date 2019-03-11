@@ -18,7 +18,7 @@ public class Controller {
         return "hello";
     }
 
-     @RequestMapping("/addIndividual")
+    @RequestMapping("/addIndividual")
     public String addIndividual(@RequestParam(value = "name", required = true) String name,
                                 @RequestParam(value = "phone", required = true) String phone,
                                 @RequestParam(value = "INIPA", required = true) int INIPA) {
@@ -33,10 +33,15 @@ public class Controller {
     }
 
     // to-do: don't work
-//    @RequestMapping("/removeUser")
-//    public String removeUser(@RequestParam(value = "Name", required = true) String Name) {
-//        repoIndividuals.delete(repoIndividuals.findByName(Name));
-//
-//        return "removed";
-//    }
+    @RequestMapping("/removeUser")
+    public String removeUser(@RequestParam(value = "Name", required = true) String Name) {
+        repoIndividuals.delete(repoIndividuals.findByName(Name));
+
+        return "removed";
+    }
+
+    @RequestMapping("/search")
+    public Individual search(@RequestParam(value = "name", required = true) String name) {
+        return repoIndividuals.findByName(name);
+    }
 }

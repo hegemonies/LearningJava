@@ -14,7 +14,7 @@ function reloadList() {
 		type: "POST",
 		dataType: "text",
 		url: "http://localhost:8080/showAll"
-	}).then(function(data) {
+	}).then(function (data) {
 		// console.log(data);
 		$('#list-of-individuals').html(data);
 	}) 
@@ -28,12 +28,25 @@ function removeUser(name) {
 	})
 }
 
-/*
+function search(form) {
+	var name = form.elements.name_for_search.value;
+
+	$.ajax({
+		type: "POST",
+		dataType: "text",
+		url: "http://localhost:8080/search?Name=" + name
+	}).then(function (data) {
+		alert(data);
+	})
+}
+
+
 $(document).ready(function() {
     $.ajax({
+		type: "POST",
+		dataType: "text",
         url: "http://localhost:8080/showAll"
     }).then(function(data) {
-       $('#list-of-individuals').append(data);
-    });
+       $('#list-of-individuals').html(data);
+    })
 });
-*/
