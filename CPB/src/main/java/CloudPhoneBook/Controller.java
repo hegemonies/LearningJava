@@ -19,10 +19,10 @@ public class Controller {
     }
 
     @RequestMapping("/addIndividual")
-    public String addIndividual(@RequestParam(value = "name", required = true) String name,
-                                @RequestParam(value = "phone", required = true) String phone,
+    public String addIndividual(@RequestParam(value = "Name", required = true) String Name,
+                                @RequestParam(value = "Phone", required = true) String Phone,
                                 @RequestParam(value = "INIPA", required = true) int INIPA) {
-        repoIndividuals.save(new Individual(name, phone, INIPA));
+        repoIndividuals.save(new Individual(Name, Phone, INIPA));
 
         return "ok";
     }
@@ -32,7 +32,6 @@ public class Controller {
         return repoIndividuals.findAll();
     }
 
-    // to-do: don't work
     @RequestMapping("/removeUser")
     public String removeUser(@RequestParam(value = "Name", required = true) String Name) {
         repoIndividuals.delete(repoIndividuals.findByName(Name));
@@ -41,7 +40,14 @@ public class Controller {
     }
 
     @RequestMapping("/search")
-    public Individual search(@RequestParam(value = "name", required = true) String name) {
-        return repoIndividuals.findByName(name);
+    public Individual search(@RequestParam(value = "Name", required = true) String Name) {
+//        return repoIndividuals.findByName(Name);
+        for (Individual individual : repoIndividuals.findAll()) {
+            if (individual.getName().equals(Name)) {
+                return individual;
+            }
+        }
+
+        return null;
     }
 }

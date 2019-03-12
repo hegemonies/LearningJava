@@ -11,8 +11,8 @@ public class Individual extends User {
 
     public Individual() {}
 
-    public Individual(String Name, String phone, int INIPA) {
-        super(Name, phone);
+    public Individual(String Name, String Phone, int INIPA) {
+        super(Name, Phone);
         setINIPA(INIPA);
     }
 

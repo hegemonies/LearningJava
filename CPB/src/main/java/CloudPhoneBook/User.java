@@ -4,13 +4,13 @@ import CSV.*;
 
 abstract class User implements CSV, Comparable<User> {
     private String Name;
-    private String phone;
+    private String Phone;
 
     public User() {}
 
-    public User(String Name, String phone) {
+    public User(String Name, String Phone) {
         setName(Name);
-        setPhone(phone);
+        setPhone(Phone);
     }
 
     public String getName() {
@@ -21,12 +21,12 @@ abstract class User implements CSV, Comparable<User> {
         this.Name = SNP;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhone(String Phone) {
+        this.Phone = Phone;
     }
 
     public String getPhone() {
-        return phone;
+        return Phone;
     }
 
     public String toString() {

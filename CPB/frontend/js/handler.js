@@ -5,7 +5,7 @@ function add(form) {
 	var inipa = elems.INIPA.value;
 
 	$.ajax({
-		url: "http://localhost:8080/addIndividual?name=" + name + "&phone=" + phone + "&INIPA=" + inipa
+		url: "http://localhost:8080/addIndividual?Name=" + name + "&Phone=" + phone + "&INIPA=" + inipa
 	});
 }
 
@@ -15,8 +15,28 @@ function reloadList() {
 		dataType: "text",
 		url: "http://localhost:8080/showAll"
 	}).then(function (data) {
-		// console.log(data);
-		$('#list-of-individuals').html(data);
+		var content = '<table>';
+		content += '<tr>';
+		content += '<td>' + 'Name' + '</td>';
+		content += '<td>' + 'Phone' + '</td>';
+		content += '<td>' + 'INIPA' + '</td>';
+		content += '</tr>';
+
+		var json = JSON.parse(data);
+
+		for (var i = 0; i < json.length; i++) {
+			content += '<tr>';
+
+			content += '<td>' + json[i]['name'] + '</td>';
+			content += '<td>' + json[i].phone + '</td>';
+			content += '<td>' + json[i].inipa + '</td>';
+
+			content += '</tr>';
+		}
+
+		content += '</table>';
+
+		$('#list-of-individuals').html(content);
 	}) 
 }
 
@@ -42,11 +62,5 @@ function search(form) {
 
 
 $(document).ready(function() {
-    $.ajax({
-		type: "POST",
-		dataType: "text",
-        url: "http://localhost:8080/showAll"
-    }).then(function(data) {
-       $('#list-of-individuals').html(data);
-    })
+	reloadList();
 });
