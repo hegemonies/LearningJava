@@ -9,7 +9,7 @@ public class Main {
     static HashSet<Integer> hashSet = new HashSet<>();
     static TreeMap<Integer, Integer> treeMap = new TreeMap<>();
     static HashMap<Integer, Integer> hashMap = new HashMap<>();
-    static int size = 12000000;
+    static int size = 1000000;
 
     public static void main(String... args) {
         try {
