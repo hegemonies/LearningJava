@@ -1,0 +1,17 @@
+package StarterDockerImages;
+
+import com.github.dockerjava.api.DockerClient;
+import com.github.dockerjava.api.model.Container;
+import com.github.dockerjava.core.DockerClientBuilder;
+import java.util.List;
+
+
+public class Main {
+    public static void main(String... args) {
+        DockerClient dockerClient = DockerClientBuilder.getInstance().build();
+
+        List<Container> containers = dockerClient.listContainersCmd().exec();
+
+        containers.forEach((a) -> System.out.println(a));
+    }
+}
