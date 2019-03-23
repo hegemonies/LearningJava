@@ -3,8 +3,8 @@ package StarterDockerImages;
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.model.Container;
 import com.github.dockerjava.core.DockerClientBuilder;
-import java.util.List;
 
+import java.util.List;
 
 public class Main {
     public static void main(String... args) {
@@ -12,6 +12,6 @@ public class Main {
 
         List<Container> containers = dockerClient.listContainersCmd().exec();
 
-        containers.forEach((a) -> System.out.println(a));
+        containers.forEach(System.out::println);
     }
 }
